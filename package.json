@@ -1,0 +1,15 @@
+{
+  "name": "samuelosapp",
+  "version": "1.0.0",
+  "description": "Native-feeling desktop interface for SamuelOS.",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Samuel Sharp",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^9.2.0"
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SamuelOS Desktop</title>
+    <script>
+        function process() {
+            var web = document.querySelector('input').value;
+            fetch(web + '/samuelos')
+                .then((response) => response.text())
+                .then((data) => {
+                    if (data == "Hey robot!") {
+                        window.location.href = web;
+                    } else {
+                        alert("That's not a valid SamuelOS app, or the server is down.");
+                    }
+                });
+        }
+    </script>
+</head>
+<body>
+    <div class="content">
+        <h1>SamuelOS Desktop</h1>
+        <h2>Enter your SamuelOS workspace URL:</h2>
+        <input name="pass" />
+        <button onclick="process();">Start Up</button>
+    </div>
+</body>
+</html>
